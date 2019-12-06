@@ -8,9 +8,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Create the JWT key used to create the signature
-var jwtKey = []byte("my_secret_key")
-
 // Signin handles new registrations
 func Signin(c *gin.Context) {
 	var creds Credentials
