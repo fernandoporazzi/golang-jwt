@@ -50,7 +50,7 @@ func Signin(c *gin.Context) {
 
 	c.SetCookie("token", tokenString, int(expirationTime.Unix()), "/", "localhost", false, true)
 
-	c.JSON(200, gin.H{
+	c.JSON(http.StatusOK, gin.H{
 		"name":    "token",
 		"value":   tokenString,
 		"expires": expirationTime,
