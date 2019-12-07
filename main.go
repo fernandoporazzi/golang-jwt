@@ -14,5 +14,6 @@ func main() {
 	})
 	r.POST("/signin", auth.Signin)
 	r.GET("/me", auth.Me)
+	r.GET("/refresh", auth.Refresh)
 	r.Run()
 }
