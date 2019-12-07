@@ -8,7 +8,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Me hhhahah
+// Me handles requests for the /me route
+// Expects a JWT in the Authorization Header
+// Ex.: Bearer abc123...rest_of_token
 func Me(c *gin.Context) {
 	authorizationHeader := c.Request.Header.Get("Authorization")
 
