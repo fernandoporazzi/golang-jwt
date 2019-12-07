@@ -35,7 +35,7 @@ func Signin(c *gin.Context) {
 	claims := &Claims{
 		Username: creds.Username,
 		StandardClaims: jwt.StandardClaims{
-			// JWT expiration time is expressed in Unix milliseconds
+			// JWT expiration time is expressed in Unix seconds
 			ExpiresAt: expirationTime.Unix(),
 		},
 	}
